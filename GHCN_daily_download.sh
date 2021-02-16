@@ -7,7 +7,7 @@
 #############################################################
 # Description
 
-# Aim: Download records from the GHCN-daily in a tidy format
+# Aim: to download records from the GHCN-daily in a tidy format
 # The inputs are : 
 # 1) the initial and final years of the record length, 
 # 2) the acronyms of the daily environmental variables, and 
@@ -19,26 +19,17 @@
 # TMIN: Minimum temperature (tenths of degrees C)
 # SNOW: Snowfall (mm)
 # SNWD = Snow depth (mm)
-# The codes of the stations can be checked in https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/readme.txt
+# The codes of the stations can be checked in https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/ghcnd-stations.txt
 
 #############################################################
 #############################################################
 # Requirements
 # To run the script, one must install csvkit in the shell. 
 # The path environment must set as: ./local/bin
-# set PATH so it includes user's private bin if it exists. 
+# to set the PATH one can use the following code: 
 # if [ -d "$HOME/.local/bin" ] ; then
 # PATH="$HOME/.local/bin:$PATH"
 # fi
-
-
-# Read daily values from GHCN(.dly format)
-# variables:
-# PRCP: Precipitation (tenths of mm)
-# SNOW: Snowfall (mm)
-# TMAX: Maximum temperature (tenths of degrees C)
-# TMIN: Minimum temperature (tenths of degrees C)
-# 
 
 #############################################################
 #############################################################
@@ -50,8 +41,6 @@
 Start=$1
 End=$2
 
-
-#############################################################
 # Define enviromental variables from the user
 
 read -p "Enter Variables separated by 'space' : " Var
